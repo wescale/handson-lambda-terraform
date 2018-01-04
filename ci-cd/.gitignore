@@ -1,0 +1,7 @@
+*.json
+python_terraform*
+certifi*
+chardet*
+idna*
+requests*
+urllib3*

@@ -1,0 +1,2 @@
+requests == 2.18.4
+python_terraform == 0.9.1
