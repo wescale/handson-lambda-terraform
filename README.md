@@ -37,6 +37,13 @@ source ./script-connect-aws.sh LASTMFACODE
 
 ## Create infrastructure
 
+### The first time you use it localy, please follow this step:
+```bash
+python ci-cd/init.py
+```
+
+### Launch script
+
 ```bash
 python ci-cd/start.py
 ```

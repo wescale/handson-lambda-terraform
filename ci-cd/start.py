@@ -1,9 +1,5 @@
 #!python
 
-import base64
-import uuid
-import hashlib
-import requests
 from python_terraform import Terraform, IsFlagged
 
 tf_base = Terraform(working_dir='iac/layer-base')
