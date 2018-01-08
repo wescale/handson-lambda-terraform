@@ -12,7 +12,7 @@ resource "aws_lambda_function" "demo_users_post_function" {
   handler = "index_post.handler"
   timeout = 120
 
-  s3_bucket = "demo-handson-serverless-package"
+  s3_bucket = "${var.s3_bucket_package}"
   s3_key = "users/users-lambda-${var.version_users}.zip"
 
   vpc_config = {

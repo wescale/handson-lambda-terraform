@@ -32,3 +32,7 @@ variable "region" {
 variable "account_id" {
   default = "543443504517"
 }
+
+variable "s3_bucket_package" {
+  default = "wescale-handson-serverless-package"
+}

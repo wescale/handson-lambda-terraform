@@ -1,11 +1,15 @@
 #!/bin/bash
 
-url=https://7kxst4lxv6.execute-api.eu-west-1.amazonaws.com/dev
+cd ../iac/layer-users
+url=$(terraform output env_url)
 
 curl -X GET $url/demo/users
-curl -X POST -d '{ "firstname":"sebastien", "lastname":"lavayssiere" }' $url/demo/users
-curl -X GET $url/demo/users/a5fbd7dd-dda2-4beb-9a0d-5985972ac2d7
-curl -X DELETE $url/demo/users/a5fbd7dd-dda2-4beb-9a0d-5985972ac2d7
+curl -X POST -d '{ "firstname":"sebastien", "lastname":"lavayssiere" }' $url/demo/users | jq .
 
-curl -X PATCH -d '{ "firstname":"seb", "lastname":"lav" }' $url/demo/users/a5240c83-ea4b-4f3d-9d28-ee6531bf07bf
+id_user=9b302ed0-a20f-4237-bf8a-6f0818674e64
+
+curl -X GET $url/demo/users/$id_user
+curl -X PATCH -d '{ "firstname":"seb", "lastname":"lav" }' $url/demo/users/$id_user
+curl -X DELETE $url/demo/users/$id_user
+
 
