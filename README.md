@@ -29,6 +29,8 @@ You have to change:
 - export AWS_SECRET_ACCESS_KEY with your AWS secret access key
 - export ACCOUNT_ARN=arn:aws:iam::*** : replace *** by your AWS account id
 
+You can connect to AWS console with your login and [assume-role](https://signin.aws.amazon.com/switchrole?roleName=handson-serverless-role-name&account=wescalefr&displayName=HandsonServerlessRole@WeSCale.fr)
+
 ## Get your credential
 
 ```bash
