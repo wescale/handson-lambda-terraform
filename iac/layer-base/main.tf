@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "demo-handson-serverless-terraform"
+    bucket = "wescale-handson-serverless-terraform"
     region = "eu-west-1"
     key = "demo/layer-base"
   }

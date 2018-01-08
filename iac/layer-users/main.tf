@@ -14,7 +14,7 @@ terraform {
 data "terraform_remote_state" "layer_base" {  
  backend = "s3"
  config {
-    bucket = "demo-handson-serverless-terraform"
+    bucket = "wescale-handson-serverless-terraform"
     region = "eu-west-1"
     key = "demo/layer-base"
  }
