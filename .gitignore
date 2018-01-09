@@ -1,3 +1,4 @@
 **/*.pyc
 script-connect-aws.sh
 .vscode*
+*.tfstate
