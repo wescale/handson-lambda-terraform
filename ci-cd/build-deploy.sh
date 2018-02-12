@@ -8,6 +8,8 @@ cd ../$project
 
 echo $PWD
 
+pip install -r requirements.txt
+
 zip -q -r $project-lambda-$version.zip *
 zip -q -d $project-lambda-$version.zip setup.cfg .gitignore
 

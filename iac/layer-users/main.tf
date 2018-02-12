@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "wescale-handson-serverless-terraform"
+    bucket = "demo-handson-serverless-terraform"
     region = "eu-west-1"
     key = "demo/layer-demo"
   }
@@ -14,7 +14,7 @@ terraform {
 data "terraform_remote_state" "layer_base" {  
  backend = "s3"
  config {
-    bucket = "wescale-handson-serverless-terraform"
+    bucket = "demo-handson-serverless-terraform"
     region = "eu-west-1"
     key = "demo/layer-base"
  }
@@ -30,9 +30,9 @@ variable "region" {
 }
 
 variable "account_id" {
-  default = "543443504517"
+  default = "256964442513"
 }
 
 variable "s3_bucket_package" {
-  default = "wescale-handson-serverless-package"
+  default = "demo-handson-serverless-package"
 }
